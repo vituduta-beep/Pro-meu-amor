@@ -1,0 +1,70 @@
+body {
+  background: linear-gradient(180deg, #1a001f, #2d0033);
+  color: white;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.heart {
+  width: 120px;
+  height: 120px;
+  background: purple;
+  position: relative;
+  margin: 40px auto;
+  transform: rotate(-45deg);
+  animation: pulse 1s infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  width: 120px;
+  height: 120px;
+  background: purple;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.heart::before {
+  top: -60px;
+  left: 0;
+}
+
+.heart::after {
+  left: 60px;
+  top: 0;
+}
+
+@keyframes pulse {
+  0% { transform: rotate(-45deg) scale(1); }
+  50% { transform: rotate(-45deg) scale(1.1); }
+  100% { transform: rotate(-45deg) scale(1); }
+}
+
+button {
+  background: purple;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #b266ff;
+}
+#btnMusica {
+  background: #8000ff;
+  color: white;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#btnMusica:hover {
+  background: #b266ff;
+}
